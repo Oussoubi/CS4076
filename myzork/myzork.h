@@ -1,30 +1,22 @@
 #ifndef MYZORK_H
 #define MYZORK_H
 
-//#include "Command.h"
-#include "Parser.h"
-//#include "Room.h"
-//#include "item.h"
-#include <iostream>
-#include <string>
-using namespace std;
+#include <QMainWindow>
 
-class MyZork {
-private:
-    //Parser parser;
-    //Room *currentRoom;
-    void createRooms();
-    void printWelcome();
-    //bool processCommand(Command command);
-    //void printHelp();
-    //void goRoom(Command command);
-    //void createItems();
-    //void displayItems();
+QT_BEGIN_NAMESPACE
+namespace Ui { class myzork; }
+QT_END_NAMESPACE
+
+class myzork : public QMainWindow
+{
+    Q_OBJECT
 
 public:
-    MyZork();
-    void play();
-    string go(string direction);
-};
+    myzork(QWidget *parent = nullptr);
+    ~myzork();
 
+private:
+    Ui::myzork *ui;
+};
 #endif // MYZORK_H
+
