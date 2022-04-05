@@ -10,23 +10,25 @@
 using namespace std;
 
 class ZorkUL {
+    friend class MainWindow;
+
 private:
-	Parser parser;
-	Room *currentRoom;
+    Parser parser;
+    Room *currentRoom;
     vector<Room> rooms;
-	void createRooms();
-	void printWelcome();
-	bool processCommand(Command command);
-	void printHelp();
-	void goRoom(Command command);
+    string teleport();
+    void createRooms();
+    void printWelcome();
+    bool processCommand(Command command);
+    void printHelp();
+    void goRoom(Command command);
     void createItems();
     void displayItems();
-    string teleport();
 
 public:
-	ZorkUL();
-	void play();
-	string go(string direction);
+    ZorkUL();
+    void play();
+    string go(string direction);
 };
 
 #endif /*ZORKUL_H_*/
