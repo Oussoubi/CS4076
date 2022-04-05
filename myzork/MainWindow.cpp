@@ -33,10 +33,10 @@ void MainWindow::on_pushButton_4_clicked()
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    goRoom("take");
-}
-
-void MainWindow::on_pushButton_6_clicked()
-{
     goRoom("teleport");
 }
+
+/*void MainWindow::on_pushButton_6_clicked()
+{
+    take();
+}*/
